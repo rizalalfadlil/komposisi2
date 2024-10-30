@@ -58,14 +58,14 @@ export default function Home() {
     } catch (e) {
       console.error(e);
     } finally {
-      window.location.reload()
+      window.location.reload();
     }
   };
 
   useEffect(() => {
     fetchData();
   }, []);
-  
+
   return (
     <div className="space-y-8 p-8">
       <p className="text-2xl font-bold">biaya komposisi</p>
@@ -81,7 +81,12 @@ export default function Home() {
               <th rowSpan={3}>komposisi</th>
               <Dialog>
                 <DialogTrigger asChild>
-                  <th colSpan={3}>umur</th>
+                  <th
+                    colSpan={3}
+                    className="hover:bg-muted transition-all duration-300 cursor-pointer"
+                  >
+                    umur
+                  </th>
                 </DialogTrigger>
                 <DialogContent>
                   <DialogTitle>edit umur</DialogTitle>
